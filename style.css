@@ -29,7 +29,6 @@ ul {
 
 .container {
   display: grid;
-  border: 10px solid red;
   height: 100vh;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 3fr;
@@ -55,27 +54,51 @@ ul {
 .sidebar {
   grid-column: 1;
   grid-row: 1 / -1;
-  border: 10px solid orchid;
   background-color: rgb(69, 144, 206);
   color: white;
   font-weight: 700;
   font-size: 1rem;
+  padding: 0px 20px;
 
   display: grid;
   grid-template-rows: 1fr 2fr 4fr;
   gap: 60px;
 }
 
+.sidebar-icon {
+  filter: invert(100%) sepia(25%) saturate(0%) 
+          hue-rotate(99deg) brightness(110%) contrast(101%);
+  height: 1.5rem;
+  width: auto;
+}
+
+.sidebar ul > li {
+  display: flex;
+  gap: 20px;
+  font-size: 1.2rem;
+}
+
+
 .logo {
-  display: grid;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
+  gap: 10px;
+}
+
+.logo > img {
+  height: 3.5rem;
+  width: auto;
+}
+
+.logo > p {
+  font-size: 1.5rem;
 }
 
 .nav > ul, .settings > ul {
   display: grid;
   gap: 15px;
 }
-
 
 .articles {
   grid-column: 2;
@@ -87,7 +110,6 @@ ul {
 }
 
 .projects {
-  border: 5px solid rosybrown;
   padding: 10px;
 }
 
