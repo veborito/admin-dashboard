@@ -40,6 +40,8 @@ ul {
   padding: 0 40px 0 20px;
   display: grid;
   grid-template-rows: 1fr 1.5fr;
+  z-index: 1;
+  box-shadow: 1px 1px 5px rgba(136, 136, 136, 0.5);
 }
 
 .search {
