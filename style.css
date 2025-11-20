@@ -37,7 +37,7 @@ ul {
 .header {
   grid-column: 2 / -1;
   grid-row: 1;
-  margin: 0;
+  padding: 0 40px 0 20px;
   display: grid;
   grid-template-rows: 1fr 1.5fr;
 }
@@ -45,7 +45,7 @@ ul {
 .search {
   display: flex;
   justify-content: center;
-  padding: 0 40px 0 20px;
+  gap: 30px;
 }
 
 .search-bar {
@@ -81,15 +81,11 @@ ul {
   width: auto;
 }
 
-.gotoprofile > :nth-child(2) > img {
+.gotoprofile > img {
   height: 3rem;
   width: auto;
-}
-
-.gotoprofile > div {
-  position: relative;
-  overflow: hidden;
-  border-radius: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .gotoprofile > p {
@@ -97,7 +93,53 @@ ul {
 }
 
 .profile {
-  border: 5px solid blue;
+  display: flex;
+}
+
+.profile-photo {
+  display: flex;
+  align-items: center;
+  flex: 2;
+  gap: 10px;
+}
+
+.profile-photo > img {
+  height: 4rem;
+  width: auto;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-photo > div > h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-photo > div > p {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+
+
+.buttons {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 30px;
+}
+
+button {
+  color: white;
+  font-weight: 600;
+  background-color: var(--blue-background);
+  height: 2.5rem;
+  width: 6rem;
+  border: 0;
+  border-radius: 50px;
 }
 
 .sidebar {
