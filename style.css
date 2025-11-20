@@ -1,6 +1,7 @@
 :root {
   font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
   --grey-background:  rgb(227, 232, 239);
+  --blue-background: rgb(69, 144, 206);
 }
 
 body {
@@ -36,14 +37,63 @@ ul {
 .header {
   grid-column: 2 / -1;
   grid-row: 1;
-  border: 10px solid green;
-
+  margin: 0;
   display: grid;
   grid-template-rows: 1fr 1.5fr;
 }
 
 .search {
-  border: 5px solid saddlebrown;
+  display: flex;
+  justify-content: center;
+  padding: 0 40px 0 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 10px;
+}
+
+.search-bar > img {
+  height: 1.3rem;
+  width: auto;
+}
+
+#search-bar {
+  width: 40vw;
+  height: 30px;
+  border: 0;
+  border-radius: 50px;
+  background-color: var(--grey-background);
+}
+
+.gotoprofile {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.gotoprofile > :first-child {
+  height: 1.3rem;
+  width: auto;
+}
+
+.gotoprofile > :nth-child(2) > img {
+  height: 3rem;
+  width: auto;
+}
+
+.gotoprofile > div {
+  position: relative;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+.gotoprofile > p {
+  font-weight: 700;
 }
 
 .profile {
@@ -53,12 +103,11 @@ ul {
 .sidebar {
   grid-column: 1;
   grid-row: 1 / -1;
-  background-color: rgb(69, 144, 206);
+  background-color: var(--blue-background);
   color: white;
   font-weight: 700;
   font-size: 1rem;
   padding: 0px 20px;
-
   display: grid;
   grid-template-rows: 1fr 2fr 4fr;
   gap: 60px;
@@ -82,7 +131,9 @@ ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding: 15px 0 0 0;
   gap: 10px;
+  align-self: flex-start;
 }
 
 .logo > img {
@@ -145,12 +196,13 @@ ul {
   font-size: 0.8rem;
   border-left: 5px solid orange;
   border-radius: 5px;
-  padding: 30px 20px;
+  padding: 20px 20px;
 }
 
 .icon-container {
   display: flex;
   align-self: flex-end;
+  margin-top: 30px;
   gap: 20px;
 }
 
