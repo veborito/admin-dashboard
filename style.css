@@ -9,6 +9,7 @@ body {
   padding: 0;
   height: 100vh;
   box-sizing: border-box;
+  line-height: 1.5;
 }
 
 
@@ -26,6 +27,12 @@ ul {
   list-style: none;
 }
 
+h2 {
+  justify-self: start;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 10px 0px 10px 0px;
+}
 
 .container {
   display: grid;
@@ -37,7 +44,7 @@ ul {
 .header {
   grid-column: 2 / -1;
   grid-row: 1;
-  padding: 0 40px 0 20px;
+  padding: 0 40px 10px 20px;
   display: grid;
   grid-template-rows: 1fr 1.5fr;
   z-index: 1;
@@ -48,6 +55,7 @@ ul {
   display: flex;
   justify-content: center;
   gap: 30px;
+  margin: 10px 0;
 }
 
 .search-bar {
@@ -201,25 +209,22 @@ button {
   display: grid;
   grid-template-columns: 3fr 1fr;
   background-color: var(--grey-background);
+  padding: 20px 30px 50px 20px;
+  gap: 20px;
 }
 
 .projects {
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .cards {
   display: grid;
-
+  flex: 1;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-}
-
-.projects > h2 {
-  justify-self: start;
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 10px 0px 10px 0px;
+  gap: 30px;
 }
 
 .card > h3 {
@@ -228,6 +233,8 @@ button {
 
 .card > p {
   color: grey;
+  padding: 0;
+  margin: 0;
 }
 
 .card {
@@ -238,8 +245,7 @@ button {
 
   background-color: white;
   font-size: 0.8rem;
-  border-left: 5px solid orange;
-  border-radius: 5px;
+  border-left: 8px solid orange;
   padding: 20px 20px;
 }
 
@@ -256,4 +262,59 @@ button {
 
 .icon-container > img {
   height: 1.2rem;
+}
+
+
+.divers {
+  display: grid;
+}
+
+.holder {
+  background-color: white;
+  padding: 15px 30px 30px 30px;
+}
+
+.announce {
+  padding: 15px 0 15px 0;
+  border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.announce > p {
+  font-size: 0.7rem;
+  color: grey;
+}
+
+h4 {
+  padding: 0;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.card, .holder {
+  box-shadow: 1px 2px 3px rgb(207, 207, 207);
+  border-radius: 8px;
+}
+
+.trend {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px 0;
+  gap: 15px;
+}
+
+.trend > div > h4 {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.trend > div > p {
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.trend > img {
+  height: 2.5rem;
+  width: auto;
+  object-fit: cover;
+  border-radius: 50%;
 }
